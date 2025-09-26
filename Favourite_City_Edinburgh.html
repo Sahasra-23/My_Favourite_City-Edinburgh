@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Edinburgh</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://weareblackivy.com/wp-content/uploads/edinburgh-scaled.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+    /* Make all attraction images equal size */
+.attraction-img {
+  width: 100%;
+  height: 250px;  /* Fixed height */
+  object-fit: cover; /* Ensures image fills area without distortion */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+    /* Hidden Nav */
+    #scrollNav {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+    section {
+      padding: 80px 20px;
+    }
+
+  .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+
+/* For Things to Do & Events Sections */  
+
+#events img {
+  border-radius: 8px;
+}
+#events h5 {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+
+
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+#restaurants .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+#restaurants .card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#restaurants .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+#things .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+#things .card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#things .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>Welcome to Edinburgh</h1>
+      <p class="lead">Scotland’s historic capital filled with castles, culture, and charm.</p>
+    </div>
+  </div>
+  
+
+  <!-- Scroll Nav (appears after hero) -->
+  <nav id="scrollNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Edinburgh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#attractions">Attractions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#restaurants">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#things">Things to Do</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introduction -->
+  <section id="intro" class="bg-light text-center">
+    <div class="container">
+      <h2>About Edinburgh</h2>
+      <p>Edinburgh is Scotland's capital; a city filled with history, culture, engaging attractions and beautiful architecture. Spend your time exploring its cobbled streets, hidden closes, world-class festivals and lively food and drink scene. Find out what makes Edinburgh so special, from its status as a UNESCO City of Literature and UNESCO World Heritage Site, to being named one of Time Out's top cities in the world. </p>
+    </div>
+  </section>
+
+  <!-- Attractions -->
+  <!-- Attractions -->
+<section id="attractions">
+  <div class="container">
+    <h2 class="text-center">Top Attractions</h2>
+    <div class="row mt-4 g-4"> <!-- g-4 adds equal spacing -->
+      <div class="col-md-4">
+        <img src="https://images.squarespace-cdn.com/content/v1/64dd388ada7c5c224b4013f8/a9c9a7ac-2faa-4bff-ba7d-4aeced75f67e/Edinburgh+Castle.jpg" 
+             class="img-fluid attraction-img" alt="Edinburgh Castle">
+        <h5 class="mt-2">Edinburgh Castle</h5>
+        <p>Historic fortress overlooking the city.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.squarespace-cdn.com/content/v1/65687b5596a03056ac625e77/30c9921f-53bd-4fef-a360-d10d86b9e20b/tempImageKP6kNF.jpg"
+          class="img-fluid attraction-img" alt="Royal Mile">
+        <h5 class="mt-2">Royal Mile</h5>
+        <p>Cobblestone street connecting the castle and Holyrood Palace.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://www.chasingthelongroad.com/wp-content/uploads/2023/02/arthurs-seat-salisbury.webp" 
+             class="img-fluid attraction-img" alt="Arthur’s Seat">
+        <h5 class="mt-2">Arthur’s Seat</h5>
+        <p>Ancient volcano offering stunning city views.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Restaurants & Cafés -->
+<!-- Restaurants & Cafés -->
+<section id="restaurants" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Best Restaurants & Cafés</h2>
+
+    <div id="restaurantCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <!-- The Milkman Café -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrSCGKhi4Ql6igU4vZMjBycCFpsb5Qyv0xbZ4sQr9AoL2mByva7Ugcp25iPYPKIAQEAZWNyI8lCpV2XjjTj99V4kdKOB4jyjl7fgMTgi-KO4ydoiIOWY4m1232skKK8G5SKZOocOA=s1360-w1360-h1020-rw" class="card-img-top" alt="The Milkman Café">
+                <div class="card-body">
+                  <h5 class="card-title">The Milkman Café</h5>
+                  <p class="card-text">Artisanal coffee shop on Cockburn Street, known for pastries and atmosphere.</p>
+                  <p><strong>⭐ ~4.6</strong></p>
+                  <a href="https://www.google.com/maps/place/7+Cockburn+Street,+Edinburgh+EH1+1BP" target="_blank" class="btn btn-sm btn-outline-primary">View on Map</a>
+                  <p class="text-muted small">7 Cockburn Street, Edinburgh EH1 1BP</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hawksmoor Edinburgh -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nplZtwokGjclMdt2hdEy54s0kawICcIXj7za72Ure0NwrW5XcfvGOsSfANuExsu7z8mGveqr0goH-rNTiGM8CsJKVQ4eVVFWJaCprEvcZTMb46IEG4QsnA3NPIdSJ_9NkViJZ0OfoKVbw95=s1360-w1360-h1020-rw" class="card-img-top" alt="Hawksmoor Edinburgh">
+                <div class="card-body">
+                  <h5 class="card-title">Hawksmoor Edinburgh</h5>
+                  <p class="card-text">Steak & seafood in a grandeur setting on West Register Street.</p>
+                  <p><strong>⭐ ~4.5</strong></p>
+                  <a href="https://www.google.com/maps/place/23+West+Register+Street,+Edinburgh+EH2+2AA" target="_blank" class="btn btn-sm btn-outline-primary">View on Map</a>
+                  <p class="text-muted small">23 W Register Street, Edinburgh EH2 2AA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dishoom Edinburgh -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4np5rZORyX_7TXjFkar6FHX-81kIuZKhfwVjM4Pj_M1r2iFvyUis53zZjx0Pw6IWj2FBGY9BHD0eTVKoDquptWRae7WXZVWjngIiHqD2bMxbUUl5zLYFh2wqkwrQSSQMqT_I-cHmcuHTiD9M=s1360-w1360-h1020-rw" class="card-img-top" alt="Dishoom Edinburgh">
+                <div class="card-body">
+                  <h5 class="card-title">Dishoom Edinburgh</h5>
+                  <p class="card-text">Bombay-style Indian comfort food in St Andrew Square.</p>
+                  <p><strong>⭐ ~4.6</strong></p>
+                  <a href="https://www.google.com/maps/place/3A+St+Andrew+Square,+Edinburgh+EH2+2BD" target="_blank" class="btn btn-sm btn-outline-primary">View on Map</a>
+                  <p class="text-muted small">3A St Andrew Square, Edinburgh EH2 2BD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Lovecrumbs -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqUAi5Cx0uth_GJD1Ed0XSqsEpbvH5ViICz4esdW0Ak6OiGzzH3CvUWJeu7aUKo4hNvjRj7iFJWUrThBuXO-5NImP-9UePA5LnWvoHKYtIZDsYjW3Sjk9a21iG3xpksW_XYEDMrTg=s1360-w1360-h1020-rw" class="card-img-top" alt="Lovecrumbs">
+                <div class="card-body">
+                  <h5 class="card-title">Lovecrumbs</h5>
+                  <p class="card-text">Café & bakery known for handmade cakes and cozy vibes in West Port.</p>
+                  <p><strong>⭐ ~4.5</strong></p>
+                  <a href="https://www.google.com/maps/place/155+West+Port,+Edinburgh+EH3+9DP" target="_blank" class="btn btn-sm btn-outline-primary">View on Map</a>
+                  <p class="text-muted small">155 West Port, Edinburgh EH3 9DP</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mimi’s Bakehouse -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nogANPp1a80UtOr_IvPyZMRjXU01kLh9OaqAxi3TsCR4gf2bG4olZA6-4kg8oGuW--z-p2_QjyYutuYcwNzgUxJlSRtTPUdLlL3jtQBD9YwF8jbV65gqf7vy3YRrJgtVRvn5sjwnQ=w243-h174-n-k-no-nu" class="card-img-top" alt="Mimi’s Bakehouse">
+                <div class="card-body">
+                  <h5 class="card-title">Mimi’s Bakehouse (Leith)</h5>
+                  <p class="card-text">Bakehouse on the Shore, great for brunch, cakes and afternoon tea.</p>
+                  <p><strong>⭐ ~4.5</strong></p>
+                  <a href="https://www.google.com/maps/place/63+Shore,+Leith,+Edinburgh+EH6+6RA" target="_blank" class="btn btn-sm btn-outline-primary">View on Map</a>
+                  <p class="text-muted small">63 Shore, Leith, Edinburgh EH6 6RA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- (Optional) Add another restaurant here -->
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <p class="text-muted">More coming soon...</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Things to Do -->
+<!-- Things to Do Carousel -->
+<section id="things" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Things to Do in Edinburgh</h2>
+
+    <div id="thingsCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+         <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Writers’ Museum -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://media.edinburgh.org/wp-content/uploads/2024/07/04121732/Central-Library-Will-OThe-Wisp-FE-1280x691.jpg" class="card-img-top" alt="Writers’ Museum">
+                <div class="card-body">
+                  <h5 class="card-title">Writers’ Museum & Makars’ Court</h5>
+                  <p class="card-text">Learn about Robert Burns, Sir Walter Scott, and Robert Louis Stevenson, with inspiring literary quotes nearby.</p>
+                  <a href="https://maps.google.com/?q=Writers%27+Museum+Edinburgh" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scottish Storytelling Centre -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://scottishstorytellingcentre.online.red61.co.uk/wp-content/uploads/sites/16/2020/08/real-talk-18_Bejoy-Sanjeev-1-scaled.jpg" class="card-img-top" alt="Scottish Storytelling Centre">
+                <div class="card-body">
+                  <h5 class="card-title">Scottish Storytelling Centre</h5>
+                  <p class="card-text">A cultural hub for Scotland’s rich storytelling, theatre, and oral traditions.</p>
+                  <a href="https://maps.google.com/?q=Scottish+Storytelling+Centre+Edinburgh" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scott Monument -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://www.britainexpress.com/images/attractions/editor3/Scott-Monument-0483.jpg" class="card-img-top" alt="Scott Monument">
+                <div class="card-body">
+                  <h5 class="card-title">Scott Monument</h5>
+                  <p class="card-text">A gothic landmark dedicated to Sir Walter Scott. Climb its steps for sweeping city views.</p>
+                  <a href="https://maps.google.com/?q=Scott+Monument+Edinburgh" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Slide 2 -->
+         <div class="carousel-item active">
+          <div class="row g-4">
+            <!-- Edinburgh Castle -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://images.squarespace-cdn.com/content/v1/64dd388ada7c5c224b4013f8/a9c9a7ac-2faa-4bff-ba7d-4aeced75f67e/Edinburgh+Castle.jpg">       
+                <div class="card-body">
+                  <h5 class="card-title">Edinburgh Castle</h5>
+                  <p class="card-text">A historic fortress dominating the skyline. Explore centuries of Scottish history and stunning views.</p>
+                  <a href="https://maps.google.com/?q=Edinburgh+Castle" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arthur’s Seat -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://www.chasingthelongroad.com/wp-content/uploads/2023/02/arthurs-seat-view.webp">
+                <div class="card-body">
+                  <h5 class="card-title">Arthur’s Seat</h5>
+                  <p class="card-text">An extinct volcano and the main peak of Holyrood Park. Perfect for hikes and city panoramas.</p>
+                  <a href="https://maps.google.com/?q=Arthur's+Seat+Edinburgh" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- National Museum of Scotland -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="https://i0.wp.com/sobt.co.uk/wp-content/uploads/2022/08/National-Museum-of-Scotland-43.jpg?fit=2000%2C1500&ssl=1" class="card-img-top" alt="National Museum of Scotland">
+                <div class="card-body">
+                  <h5 class="card-title">National Museum of Scotland</h5>
+                  <p class="card-text">From Scottish antiquities to world cultures, discover it all in this world-class museum.</p>
+                  <a href="https://maps.google.com/?q=National+Museum+of+Scotland" target="_blank" class="btn btn-primary btn-sm">View on Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#thingsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#thingsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Local Events -->
+<!-- Local Events -->
+<section id="events" class="py-5">
+  <div class="container">
+    <!-- Heading outside the image -->
+    <h2 class="text-center mb-4">Local Events & Festivals</h2>
+
+    <!-- Big background box -->
+    <div class="events-bg">
+      <ul class="event-list">
+        <li>
+          <strong>Edinburgh Festival Fringe (1–25 August annually)</strong>  
+          – World-famous arts festival with comedy, theatre, and music.
+        </li>
+        <li>
+          <strong>Royal Edinburgh Military Tattoo (Early–Mid August)</strong>  
+          – Military bands & fireworks at Edinburgh Castle.
+        </li>
+        <li>
+          <strong>Scottish Vegan Festival (April)</strong>  
+          – Vegan food, lifestyle, talks & stalls at Assembly Rooms.
+        </li>
+        <li>
+          <strong>Edinburgh Science Festival (April)</strong>  
+          – Interactive exhibits, performances & workshops across the city.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Big banner box with background image */
+  .events-bg {
+    position: relative;
+    background: url("https://plus.unsplash.com/premium_photo-1699566448247-1627bee256d0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWRpbmJ1cmdofGVufDB8fDB8fHww") 
+                no-repeat center center/cover; 
+ 
+    border-radius: 16px;
+    padding: 80px 50px;  /* makes the box bigger */
+    min-height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Event list styling */
+  .event-list {
+    list-style: disc;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    background: rgba(0,0,0,0.5); /* optional transparent overlay for readability */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 700px;
+  }
+
+  .event-list li {
+    margin-bottom: 15px;
+  }
+</style>
+
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2>Contact Information</h2>
+      <p>For tours and hotel bookings:</p>
+      <p>Email: info@edinburghtours.com | Phone: +44 131 123 4567</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 Discover Edinburgh </p>
+  </footer>
+
+  <!-- Bootstrap & jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Show nav only after scrolling past hero
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > $(".hero").height() - 50) {
+        $("#scrollNav").fadeIn();
+      } else {
+        $("#scrollNav").fadeOut();
+      }
+    });
+  </script>
+</body>
+</html>
